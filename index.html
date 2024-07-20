@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,12 +14,12 @@
     <section class="contenedor">
         <section class="contenedor__interior">
             <div class="contenedor__interior__texto">
-                <textarea rows="17">Ingrese el texto aqui</textarea>
+                <textarea placeholder="Ingrese el texto aqui" rows="17"></textarea>
                 <p id="aviso">❗Solo letras minúsculas y sin acentos</p> 
             </div>
             
             <section class="contenedor__botones">
-                <button class="contenedor__botones__boton-izquierdo">Encriptar</button>
+                <button class="contenedor__botones__boton-izquierdo" onclick="encriptar();">Encriptar</button>
                 <button class="contenedor__botones__boton-derecho">Desencriptar</button>
             </section>  
         </section>
