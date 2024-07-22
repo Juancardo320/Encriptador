@@ -1,8 +1,16 @@
-let encryptedText;
 let htmlElement;
 let htmlElement2;
 const encryptRules = {"e":"enter", "i":"imes", "a":"ai", "o":"ober", "u":"ufat"};
 const encryptRules2 = {"enter":"e", "imes":"i", "ai":"a", "ober":"o", "ufat":"u"};
+const expre = /^[a-z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?\s\u2190\u2191\u2192\u2193]*$/;
+let encryptedText = document.querySelector('textarea');
+
+encryptedText.addEventListener('input', (event) => {
+    const value = event.target.value;
+    if (!expre.test(value)) {
+      event.target.value = value.slice(0, -1); 
+    }
+});
 
 function encrypt(){
     encryptedText = document.querySelector('textarea').value;
@@ -11,6 +19,7 @@ function encrypt(){
     htmlElement = document.getElementById('mensaje-encriptado');
     htmlElement.innerHTML = encryptedText;
     styleChanges();
+    return
 }
 
 function decrypt(){
@@ -20,6 +29,7 @@ function decrypt(){
     htmlElement = document.getElementById('mensaje-encriptado');
     htmlElement.innerHTML = encryptedText;
     styleChanges();
+    return
 }
 
 function styleChanges(){
@@ -31,6 +41,7 @@ function styleChanges(){
     htmlElement2.style.justifyContent = 'flex-start';
     htmlElement.style.marginTop = '25px';
     htmlElement.style.textAlign = 'left';
+    return
 }
 
 async function copyText(){
@@ -41,5 +52,6 @@ async function copyText(){
     } catch (err) {
       console.error('Error al copiar: ', err);
     }
+    return
 }
 
