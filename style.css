@@ -52,6 +52,10 @@ textarea{
     flex-direction: row;
 }
 
+button:hover {
+    background-color:aqua;
+}
+
 .contenedor__botones__boton-izquierdo{
     text-align: center;
     color: white;
@@ -118,6 +122,10 @@ textarea{
     font-size: 16px;
     font-family: "Inter", sans-serif;
     margin-top: 13%;
+}
+
+#copiar:hover {
+    background-color: aqua;
 }
 
 .footer {

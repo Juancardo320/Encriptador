@@ -20,15 +20,15 @@
             
             <section class="contenedor__botones">
                 <button class="contenedor__botones__boton-izquierdo" onclick="encriptar();">Encriptar</button>
-                <button class="contenedor__botones__boton-derecho">Desencriptar</button>
+                <button class="contenedor__botones__boton-derecho" onclick="desencriptar();">Desencriptar</button>
             </section>  
         </section>
         
-        <div class="contenedor__derecho">
+        <div class="contenedor__derecho" id="contenedor-nuevo">
             <img src="assets/Muñeco.png" height="253" width="280" id="muñeco" alt="Imagen Muñeco">
             <h2 id="mensaje-no-encontrado">Ningún mensaje fue encontrado</h2>
             <p id="mensaje-encriptado">Ingresa el texto que desees encriptar o desencriptar.</p>
-            <button id="copiar">Copiar</button>
+            <button id="copiar" hidden onclick="copyText();">Copiar</button>
         </div>
     </section>
     
